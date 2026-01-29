@@ -1,0 +1,9 @@
+build/
+*.o
+*.a
+*.so
+*.out
+chessviz
+.vscode/
+.idea/
+.DS_Store
