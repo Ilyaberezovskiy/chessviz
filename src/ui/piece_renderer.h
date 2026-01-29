@@ -3,19 +3,24 @@
 
 #include <SFML/Graphics.hpp>
 #include "../chess/board.h"
-#include <map>
-#include <string>
 
 namespace ui {
 
 class PieceRenderer {
 public:
-    PieceRenderer();
+    PieceRenderer() = default;
     void render(sf::RenderWindow& window, const chess::Board& board);
 
 private:
-    std::map<std::string, sf::Texture> textures;
-    void loadTextures();
+    // Функции рисования фигур
+    void drawPawn(sf::RenderTarget& target, float x, float y, bool isWhite);
+    void drawKnight(sf::RenderTarget& target, float x, float y, bool isWhite);
+    void drawBishop(sf::RenderTarget& target, float x, float y, bool isWhite);
+    void drawRook(sf::RenderTarget& target, float x, float y, bool isWhite);
+    void drawQueen(sf::RenderTarget& target, float x, float y, bool isWhite);
+    void drawKing(sf::RenderTarget& target, float x, float y, bool isWhite);
+    
+    sf::Color getColorForPiece(bool isWhite);
 };
 
 } // namespace ui

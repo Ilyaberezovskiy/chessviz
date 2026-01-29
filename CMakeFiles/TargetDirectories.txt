@@ -1,0 +1,3 @@
+/home/engine/project/CMakeFiles/chessviz.dir
+/home/engine/project/CMakeFiles/edit_cache.dir
+/home/engine/project/CMakeFiles/rebuild_cache.dir
